@@ -66,22 +66,6 @@ export default class Xbl extends React.Component {
                     //     // return <h2>{keys["Assists"]["Healing done"]}</h2>
                     //   })
                     //
-                    // : xbl.map(function(heroData){
-                    //   return <div key={ heroData.Ana } class="col-md-6 col-sm-12 col-xs-12 mt30">
-                    //             <div class="panel panel-default">
-                    //               <div class="panel-heading">
-                    //
-                    //               </div>
-                    //               <div class="panel-body">
-                    //                 <div class="col-md-6 col-sm-12 col-xs-12 mt30">
-                    //                   testing testing
-                    //                 </div>
-                    //                 <div class="col-md-6 col-sm-12 col-xs-12 mt30">
-                    //                   testing testing
-                    //                 </div>
-                    //               </div>
-                    //             </div>
-                    //           </div>
                     //   })
                     //   }
                   </div>
