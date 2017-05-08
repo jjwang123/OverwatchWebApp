@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:700i');
+
+body, html {
+    height: 100%;
+}
+
+
+.navbar{
+  border: 0px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+  &.navbar-default{
+    border-color: transparent;
+    background-color: #2e3c62;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+      &.navbar-brand{
+        color: white;
+      }
+    }
+
+}
+
+.container{
+  height: 100%;
+}
+
+.page-title{
+  font-size: 100px;
+}
+
+.hero-image{
+  display: block;
+
+  background-image: url("Ks5FNJr.jpg");
+
+  height: 500px;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.Overlord{
+  background-color: #756845;
+  border-shadow: 10px;
+}
+
+h1.title{
+  color: white;
+  font-family: 'Titillium Web', sans-serif;
+}
