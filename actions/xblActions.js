@@ -4,7 +4,7 @@ export function fetchXbl (query){
   return function (dispatch) {
     dispatch({type: 'FETCH_XBL', payload: []})
     if (query) {
-      axios.get('https://enhanced-ow-api.herokuapp.com/boludo00/quickplay/xbl/')
+      axios.get('https://enhanced-ow-api.herokuapp.com/' + query)
       .then((response) => {
         dispatch({type: 'FETCH_XBL_FULFILLED', payload: response.data})
       })

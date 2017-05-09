@@ -40,6 +40,10 @@ var config = {
     }
   },
 
+  stats: {
+    warnings: false
+  },
+
   module: {
     loaders: [
       {

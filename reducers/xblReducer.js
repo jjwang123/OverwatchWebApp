@@ -1,7 +1,5 @@
 export default function reducer (state = {
-  xbl: {
-    "Ana" : { "Assists" : { "Healing done" : " " } }
-  },
+  xbl: [],
   fetching: false,
   fetched: false,
   error: null

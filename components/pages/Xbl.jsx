@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { fetchXbl } from '../../actions/xblActions'
+import XblChildren from './XblChildren.jsx'
 
 @connect((store) => {
   return {
@@ -15,8 +16,9 @@ export default class Xbl extends React.Component {
      this.fetchXbl = this.fetchXbl.bind(this)
   }
 
-  componentWillMount() {
-    this.props.dispatch(fetchXbl())
+  componentDidMount() {
+    var response = this.props.dispatch(fetchXbl())
+    var path = response
   }
 
   fetchXbl(e) {
@@ -31,7 +33,13 @@ export default class Xbl extends React.Component {
 
   render() {
     const { fetching, xbl } = this.props
-
+    var output = []
+    var output = Object.keys(xbl).map(function(keys){
+      return <div class = "names">
+              <h2>{[keys]}</h2>
+              <div class = "work"><XblChildren xbl = {xbl[keys]} /></div>
+            </div>
+    })
     return <div id = "content">
               <div class = "Overlord">
                 <div class = "row">
@@ -43,7 +51,9 @@ export default class Xbl extends React.Component {
                   </div>
                 </div>
               </div>
-              console.log({xbl["Ana"]["Assists"]})
+              <div class="row text-center">
+                {output}
+              </div>
             </div>
     /*return <div id="content">
               <div class="Overlord">
