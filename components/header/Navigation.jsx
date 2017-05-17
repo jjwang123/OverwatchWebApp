@@ -5,11 +5,11 @@ export default class Navigation extends React.Component{
     return (
       <section class = "head-bar">
         <nav class="navbar navbar-default navbar-static-top" role = "navigation">
-          <a class="navbar-brand" href="/">Locations</a>
-          <a class="navbar-brand" href="/">Contact</a>
+          <a class="navbar-brand" href="/">OVER<span class = "bolded">API</span></a>
         </nav>
-        <div class = "hero-image">
-        </div>
+        <div class = "catch-us-on">Find us on Discord!</div>
+          <div class = "hero-image">
+          </div>
         <div class = "page-title">OverAPI</div>
       </section>
     );
