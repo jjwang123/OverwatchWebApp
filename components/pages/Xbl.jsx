@@ -53,8 +53,11 @@ export default class Xbl extends React.Component {
     var output =
       Object.keys(xbl).map((keys) => {
         return <div class= "col-md-3" key = {[keys]}>
-                  <div class = "hero-portrait">
-                    <img name = {[keys]} src = {"../../HeroImages/" + [keys] + "-portrait.png" }></img>
+                  <div class = "thumbnail">
+                    { [keys][0] !== "Soldier: 76"
+                    ?<img name = {[keys]} src = {"../../HeroImages/" + [keys] + "-portrait.png"}></img>
+                    :<img name = {[keys]} src = {"../../HeroImages/Soldier76-portrait.png"}></img>
+                    }
                     {[keys]}
                   </div>
             </div>
@@ -69,10 +72,7 @@ export default class Xbl extends React.Component {
                   </div>
                 </div>
               <div class="row text-center" onClick = {this.__onClick}>
-                { this.state.Visible
-                  ?<SideBar Visible = {this.state.Visible} alignment = "left"/>
-                  : null
-                }
+                <SideBar Visible = {this.state.Visible} alignment = "left"/>
                 <div class = "portrait-container">
                   {output}
                 </div>

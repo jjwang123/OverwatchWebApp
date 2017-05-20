@@ -7,8 +7,8 @@ export default class SideBar extends React.Component{
   }
 
   componentDidMount(){
-    console.log(this.state.visible)
   }
+
   render(){
     return <div class = "side-menu">
         <div className={(!this.props.Visible ? "" : "visible ") + this.props.alignment}>

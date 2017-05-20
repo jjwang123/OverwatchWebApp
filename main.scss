@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:700');
 @import url('https://fonts.googleapis.com/css?family=Audiowide|Nunito:600i');
+@import url('https://fonts.googleapis.com/css?family=Heebo:400');
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Biryani:800|Heebo:300|Iceland|Racing+Sans+One|Sarpanch:800|Six+Caps');
 
 @mixin transition($transition...) {
     -moz-transition:    $transition;
@@ -30,9 +32,6 @@ body, html {
       font-size: 2em;
       font-family: 'Nunito', sans-serif;
       color:white;
-      span.bolded{
-        font-weight: 500;
-      }
     }
     &.navbar-static-top{
       margin-bottom: 0px;
@@ -52,18 +51,18 @@ body, html {
 }
 
 .catch-us-on{
-  font-family: 'Nunito', sans-serif;
+  height: 40px;
+  font-family: 'Heebo', sans-serif;
+  color: black;
   background-color: #3399FF;
+  line-height: 40px;
   text-align: center;
   width: 100%;
-  font-size: 1.5em;
-}
-
-.page-title{
-  font-size: 100px;
-  text-align: center;
-  font-family: 'Titillium Web', sans-serif;
-  text-decoration-color: red;
+  font-size: 1.25em;
+  img.discord-logo{
+    width: 5em;
+    padding-bottom: 3px;
+  }
 }
 
 .hero-image{
@@ -79,6 +78,28 @@ body, html {
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
+
+  .hero-slogan{
+    color: white;
+    text-align: center;
+    font-size: 3em;
+  }
+
+  h1{
+    font-size: 2em;
+    margin-top: 0px;
+    font-family: 'Iceland', cursive;
+  }
+
+  h2{
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 20px;
+  }
+
+  h3{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5em;
+  }
 }
 
 h1.title{
@@ -104,9 +125,6 @@ h1.title{
 
 .side-menu{
   display: block;
-  width: 50px;
-  @include transition(all ease 1s);
-  @include transition(all ease 1s);
   >div{
     position:fixed;
     z-index:2;
@@ -114,11 +132,15 @@ h1.title{
     width:50px;
     height:100%;
     box-sizing: border-box;
-    &.visible.left{
+    @include transition(transform 1s ease);
+    @include transition(-webkit-transform 1s ease);
+    &.left{
       background:#273D7A;
-      left: 0px;
-      // transform: translate3d(50px, 0, 0);
-      // -webkit-transform: translate3d(50px, 0, 0);
+      left: -50px;
+    }
+    &.visible.left{
+      transform: translate3d(50px, 0, 0);
+      -webkit-transform: translate3d(50px, 0, 0);
     }
     >.side-menu-item{
       float:left;

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)file:///Users/jwang/Desktop/LEANDATA/index.html?searchterm=om -->
+<html data-ember-extension="1"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link href="./index.html_searchterm=om_files/css" rel="stylesheet">
+<link rel="stylesheet" href="./index.html_searchterm=om_files/styles.css">
+</head>
+
+  <body><div class="panel">
+    <div class="panel-header">
+      <div class="title-portion">
+        <div class="header-title">
+            GET THE 411 NOW!
+        </div>
+      </div>
+      <div class="button-portion">
+        <img src="./index.html_searchterm=om_files/Expand_Arrow.png" onclick="clickFunction()">
+        
+      </div>
+    </div>
+    <div id="panel-body" class="transform-active">
+      <form id="search">
+        Search: <input type="text" name="searchterm" style="width: 200px;">
+      </form>
+      <div id="entries">
+        <div class="entry entry0">
+          <img src="./index.html_searchterm=om_files/NEW_icon.png" class="new-icon">
+          <div class="entry-body">
+              <a href="file:///">Subtitle goes here</a><br>
+              Lorem ipsum dolor sit amet labore et dolore magna aliqua.
+          </div>
+        </div>
+        <div class="entry entry1">
+          <img src="./index.html_searchterm=om_files/NEW_icon.png" class="new-icon">
+          <div class="entry-body">
+              <a href="file:///">Subtitle goes here</a><br>
+              Lorem ipsum dolor sit amet labore et dolore magna aliqua.
+          </div>
+        </div>
+        <div class="entry entry2">
+          <div class="entry-body">
+              <a href="file:///">Subtitle goes here</a><br>
+              Lorem ipsum dolor sit amet labore et dolore magna aliqua.
+          </div>
+        </div>
+        <div class="entry entry3">
+          <div class="entry-body">
+              <a href="file:///">Subtitle goes here</a><br>
+              Lorem ipsum dolor sit amet labore et dolore magna aliqua.
+          </div>
+        </div>
+        <div class="entry entry4">
+          <div class="entry-body">
+              <a href="file:///">Subtitle goes here</a><br>
+              <div class="container">
+                <img src="./index.html_searchterm=om_files/Data_icon.png" class="data-icon">
+              </div>
+              Lorem ipsum dolor sit amet labore et dolore magna aliqua. Lorem ipsum dolor sit amet labore et...
+              <div class="arrow-icon">
+                <img src="./index.html_searchterm=om_files/Read_Arrow.png">
+                Read more
+              </div>
+          </div>
+        </div>
+        <div class="entry entry5">
+          <div class="entry-body">
+              <a href="file:///">Subtitle goes here</a><br>
+              Lorem ipsum dolor sit amet labore et dolore magna aliqua.
+          </div>
+        </div>
+        <div class="entry entry6">
+          <div class="entry-body">
+              <a href="file:///">Subtitle goes here</a><br>
+              Lorem ipsum dolor sit amet labore et dolore magna aliqua.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  function clickFunction() {
+    var x = document.getElementById("panel-body");
+    // var y = document.getElementById("entries");
+    var elements = document.getElementsByClassName("entry");
+    var count = 0;
+
+    for(var i=0; i < elements.length; i++) {
+
+      // var flag = elements[i].className.includes("entry"+i);
+      // console.log(elements[i].childNodes)
+
+      // var bodyText = elements[i].childNodes[3].childNodes[3];
+      // if(flag){
+      //   elements[i].classList.toggle("entry" + i);
+      // }
+      // else{
+        elements[i].classList.toggle("entry" + i);
+      // }
+      //   // console.log(elements[i].childNodes[3].childNodes[3].length);
+      }
+
+    // document.getElementById("entry").classList.toggle("entry-active");
+    x.classList.toggle("transform-active");
+    // y.classList.toggle("entry-active");
+  }
+  </script>
+
+</body></html>

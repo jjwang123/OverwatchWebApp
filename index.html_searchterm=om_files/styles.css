@@ -1,0 +1,152 @@
+.panel{
+  height: 1250px;
+  width: 650px;
+  padding: 200px 200px 200px 200px;
+}
+
+.panel-header{
+  z-index: 2;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  box-sizing: border-box;
+  height: 175px;
+  width: inherit;
+  border-color: #8da8bf;
+  border-radius: 15px;
+  background-color: #8da8bf;
+}
+
+.title-portion{
+  padding-left: 60px;
+  height: 75px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.header-title{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 55px;
+  color: white;
+}
+
+.button-portion{
+  padding-left: 20px;
+}
+
+.button-portion img{
+  height: 40px;
+  width: 40px;
+}
+
+#panel-body{
+  visibility: hidden;
+  display: block;
+  top: 0px;
+  height: 5%;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: #8da8bf;
+  border-radius: 15px;
+  transition: all 2.5s ease;
+}
+
+#panel-body.transform-active {
+  padding-top: 190px;
+  height: 100%;
+  visibility: visible;
+}
+
+.entry-body:hover{
+  background-color: #c4ece4;
+}
+
+#search{
+  font-family: 'Open Sans', sans-serif;
+  text-align: right;
+  padding-bottom: 35px;
+}
+
+/*#search.entry-active{
+  padding-top: 190px;
+}*/
+
+.entry{
+  position: absolute;
+  top: 0px;
+  padding-bottom: 40px;
+  transition: all 2s ease;
+}
+
+.entry.entry1{
+  top: 12%;
+}
+
+.entry.entry2{
+  top: 20%;
+}
+
+.entry.entry3{
+  top: 30%;
+}
+
+.entry.entry4{
+  top: 40%;
+}
+
+.entry.entry5{
+  top: 55%;
+}
+
+.entry.entry6{
+  top: 65%;
+}
+
+#entries{
+  position: relative;
+  height: 100%;
+
+}
+
+img.new-icon{
+  float: left;
+  padding-left: 15px;
+  padding-right: 10px;
+  height: 50px;
+  width: 50px;
+}
+
+.entry-body{
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 5px;
+  padding-left: 75px;
+  padding-right: 75px;
+  font-size: 25px;
+}
+
+.entry-body a{
+  color: #555555;
+}
+
+.container{
+  height: inherit;
+}
+img.data-icon{
+  float: left;
+  padding-right: 5px;
+  padding-top: 5px;
+}
+
+.arrow-icon{
+  float:right;
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  padding-right: 150px;
+  font-size: 10px;
+}
+
+.arrow-icon img{
+  padding-right: 5px;
+}
