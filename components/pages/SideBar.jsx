@@ -10,9 +10,11 @@ export default class SideBar extends React.Component{
   }
 
   render(){
+    const {iconVisible, iconName} = this.props
+
     return <div class = "side-menu">
         <div className={(!this.props.Visible ? "" : "visible ") + this.props.alignment}>
-          <SideBarIcons />
+          <SideBarIcons iconName = {iconName} icons = {iconVisible}/>
         </div>
       </div>
   }

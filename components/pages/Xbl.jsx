@@ -17,7 +17,9 @@ export default class Xbl extends React.Component {
      super(props)
      this.state = {
        Visible: false,
-       Name: null
+       Name: null,
+       iconVisible: false,
+       iconName: null
      }
      this.__onClick = this.__onClick.bind(this)
      this.fetchXbl = this.fetchXbl.bind(this)
@@ -40,8 +42,14 @@ export default class Xbl extends React.Component {
 
   __onClick = (e) => {
     console.log(e.target.tagName)
+    console.log(e.target.name)
     console.log(this.state.Visible)
-    if(e.target.tagName.toLowerCase() === "img"){
+
+    if(e.target.name.toLowerCase() === "offense" || e.target.name.toLowerCase() === "tank" || e.target.name.toLowerCase() === "support" || e.target.name.toLowerCase() === "defense"){
+      this.setState({iconVisible: !this.state.iconVisible})
+      this.setState({iconName: e.target.name})
+    }
+    else if(e.target.tagName.toLowerCase() === "img"){
       this.setState({Name: e.target.name})
       this.setState({Visible: true})
     }
@@ -51,7 +59,9 @@ export default class Xbl extends React.Component {
     const { fetching, xbl } = this.props
     var output = []
     var output =
-      Object.keys(xbl).map((keys) => {
+      Object.keys(xbl).filter((keys) => {
+        return keys === "ALL HEROES" ? false : true
+      }).map((keys) => {
         return <div class= "col-md-3" key = {[keys]}>
                   <div class = "thumbnail">
                     { [keys][0] !== "Soldier: 76"
@@ -72,8 +82,9 @@ export default class Xbl extends React.Component {
                   </div>
                 </div>
               <div class="row text-center" onClick = {this.__onClick}>
-                <SideBar Visible = {this.state.Visible} alignment = "left"/>
+                <SideBar  iconName = {this.state.iconName} iconVisible = {this.state.iconVisible} Visible = {this.state.Visible} alignment = "left"/>
                 <div class = "portrait-container">
+                  {console.log(output)}
                   {output}
                 </div>
                 <div class = "hero-data">
