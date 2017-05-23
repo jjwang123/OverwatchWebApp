@@ -1,7 +1,13 @@
 import React from 'React'
 
 export default class Navigation extends React.Component{
+  constructor(props){
+    super(props)
+  }
+
   render() {
+    const {xbl, name, Visible} = this.props
+
     return (
       <section class = "head-bar">
         <nav class="navbar navbar-default navbar-static-top" role = "navigation">
@@ -12,13 +18,22 @@ export default class Navigation extends React.Component{
         <img src = "discord-logo.svg" class = "discord-logo">
         </img>
         </a></div>
-          <div class = "hero-image">
+        { !Visible
+          ?<div class = "hero-image">
             <div class = "hero-slogan">
-            <h1>Overpower</h1>
-            <h2>with</h2>
-            <h3>OVERAPI</h3>
+              <h1>Overpower</h1>
+              <h2>with</h2>
+              <h3>OVERAPI</h3>
             </div>
           </div>
+          : <div class = {name}>
+            <div class = "hero-specific-slogan">
+              {name}
+            </div>
+            <div class = "hero-specific-image">
+            </div>
+          </div>
+        }
       </section>
     );
   }

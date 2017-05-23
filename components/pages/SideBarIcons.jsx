@@ -25,26 +25,10 @@ export default class SideBarIcons extends React.Component{
     const support = ["Ana", "Lucio", "Mercy", "Symmetra", "Zenyatta"]
 
     return <div class = "side-menu-item">
-
-      <div class = "items">
-        <img name = "offense" src = {"../../HeroImages/ClassIcons/offense-icon.png"}></img>
-        <HeroClasses xbl = {xbl} iconName = {iconName} icons = {icons} classKey = {offense}/>
-      </div>
-      <div class = "items">
-        <img name = "defense" src = {"../../HeroImages/ClassIcons/defense-icon.png"}></img>
-        <HeroClasses xbl = {xbl} iconName = {iconName} icons = {icons} classKey = {defense}/>
-      </div>
-      <div class = "items">
-        <img name = "tank" src = {"../../HeroImages/ClassIcons/tank-icon.png"}></img>
-        <HeroClasses xbl = {xbl} iconName = {iconName} icons = {icons} classKey = {tank}/>
-      </div>
-      <div class = "items">
-        <img name = "support" src = {"../../HeroImages/ClassIcons/support-icon.png"}></img>
-        <HeroClasses xbl = {xbl} iconName = {iconName} icons = {icons} classKey = {support}/>
-      </div>
+      <HeroClasses xbl = {xbl} iconName = {iconName} icons = {icons} classKey = {offense} name = "offense"/>
+      <HeroClasses xbl = {xbl} iconName = {iconName} icons = {icons} classKey = {defense} name = "defense"/>
+      <HeroClasses xbl = {xbl} iconName = {iconName} icons = {icons} classKey = {tank} name = "tank"/>
+      <HeroClasses xbl = {xbl} iconName = {iconName} icons = {icons} classKey = {support} name = "support"/>
     </div>
-    /*<HeroClasses xbl = {xbl} iconName = {iconName} icons = {icons} classKey = {defense} />
-    <HeroClasses xbl = {xbl} iconName = {iconName} icons = {icons} classKey = {tank} />
-    <HeroClasses xbl = {xbl} iconName = {iconName} icons = {icons} classKey = {support} />*/
   }
 }

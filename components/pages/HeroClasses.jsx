@@ -21,16 +21,15 @@ export default class HeroClasses extends React.Component{
           return result
         }, [])
 
-    return <div class = {name} key = {name}>
-      /*<div class = "row">
+    return <div class = "items" key = {name}>
+      <div class = "row">
         <img name = {name} src = {"../../HeroImages/ClassIcons/" + name + "-icon.png"}></img>
       </div>
       {console.log(output)}
       {icons && iconName === name
         ?output
         : null
-      }*/
-      {output}
+      }
     </div>
   }
 }

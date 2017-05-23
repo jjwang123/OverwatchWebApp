@@ -13,10 +13,8 @@ require('./main.scss');
 ReactDOM.render(
   <Provider store={store}>
     <Router history={hashHistory}>
-      <Route path="/" component={Layout}>
+      <Route path="/" component={Xbl}>
         <Route component = {SideBar}></Route>
-        <IndexRoute component={Xbl}>
-        </IndexRoute>
       </Route>
     </Router>
   </Provider>,

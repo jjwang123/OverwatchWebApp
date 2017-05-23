@@ -4,6 +4,7 @@ import { fetchXbl } from '../../actions/xblActions'
 import {Motion, spring} from 'react-motion';
 import XblChildren from './XblChildren.jsx'
 import SideBar from './SideBar.jsx'
+import Navigation from '../header/Navigation.jsx'
 
 @connect((store) => {
   return {
@@ -18,7 +19,7 @@ export default class Xbl extends React.Component {
      this.state = {
        Visible: false,
        Name: null,
-       iconVisible: false,
+       iconVisible: true,
        iconName: null
      }
      this.__onClick = this.__onClick.bind(this)
@@ -46,8 +47,15 @@ export default class Xbl extends React.Component {
     console.log(this.state.Visible)
 
     if(e.target.name.toLowerCase() === "offense" || e.target.name.toLowerCase() === "tank" || e.target.name.toLowerCase() === "support" || e.target.name.toLowerCase() === "defense"){
-      this.setState({iconVisible: !this.state.iconVisible})
-      this.setState({iconName: e.target.name})
+      if(this.state.iconName !== e.target.name){
+        this.setState({iconVisible: true})
+        this.setState({iconName: e.target.name})
+        console.log("not equals set state" + this.state.iconName + this.state.iconVisible)
+      }
+      else{
+        console.log("else" + this.state.iconVisible)
+        this.setState({iconVisible: !this.state.iconVisible})
+      }
     }
     else if(e.target.tagName.toLowerCase() === "img"){
       this.setState({Name: e.target.name})
@@ -72,7 +80,11 @@ export default class Xbl extends React.Component {
                   </div>
             </div>
     })
-    return <div id = "content">
+    return <div>
+            <Navigation xbl = {xbl[this.state.Name]} name = {this.state.Name} Visible = {this.state.Visible}/>
+              <section id = "heros">
+                <div class = "container">
+            <div id = "content">
                 <div class = "row">
                   <div class="col-md-12 pt50 text-center">
                     <h1 class = "title">Search by btag</h1>
@@ -85,15 +97,25 @@ export default class Xbl extends React.Component {
                 <SideBar  iconName = {this.state.iconName} iconVisible = {this.state.iconVisible} Visible = {this.state.Visible} alignment = "left"/>
                 <div class = "portrait-container">
                   {console.log(output)}
-                  {output}
-                </div>
-                <div class = "hero-data">
-                  { this.state.Visible
-                    ?<XblChildren xbl = {xbl[this.state.Name]} />
+                  { !this.state.Visible
+                    ?output
                     : null
                   }
                 </div>
               </div>
+              <section class = "hero-data">
+                { this.state.Visible
+                  ?(<div class = "lol">
+                      <XblChildren xbl = {xbl[this.state.Name]} name = {this.state.Name} fieldType = "Match Awards"/>
+                      <XblChildren xbl = {xbl[this.state.Name]} name = {this.state.Name} fieldType = "Assists"/>
+                    </div>
+                  )
+                  : null
+                }
+              </section>
+            </div>
+            </div>
+            </section>
             </div>
   }
 }
